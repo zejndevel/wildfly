@@ -12,8 +12,9 @@ jobs:
       - name: Checkout wildfly-core
         uses: actions/checkout@v2
         with:
+          path: wildfly-core
           repository: predkambrij/wildfly-core
-          branch: gh_12.0.3.Final
+          ref: gh_12.0.3.Final
       - name: Build project
         id: dockerstep
         uses: ./builddir/

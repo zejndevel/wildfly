@@ -3,5 +3,5 @@
 pwd
 
 touch beje
-zip -r artifact.zip beje
+zip -r artifact.zip .
 
