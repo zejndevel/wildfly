@@ -1,13 +1,8 @@
-FROM ubuntu:18.04
-
-ENV DEBIAN_FRONTEND noninteractive
+FROM maven:3.6.1-jdk-8-alpine
 
 
-RUN apt-get update && \
-    apt-get install -y zip && \
-    true
 
-RUN mkdir /surv && \
+RUN apk add --no-cache zip && \
     true
 
 COPY entrypoint.sh /entrypoint.sh

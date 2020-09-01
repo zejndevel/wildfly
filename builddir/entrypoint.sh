@@ -2,6 +2,10 @@
 
 pwd
 
-touch beje
+cd wildfly-core/
+mvn -Dmaven.test.skip=true install
+cd -
+mvn -Dmaven.test.skip=true install
+
 zip -r artifact.zip .
 
