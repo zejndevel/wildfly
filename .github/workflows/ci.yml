@@ -7,12 +7,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout wildfly
         uses: actions/checkout@v2
-      - name: Checkout code
+      - name: Checkout wildfly-core
         uses: actions/checkout@v2
         with:
-          repository: predkambrij/wildfly-core@gh_12.0.3.Final
+          repository: predkambrij/wildfly-core
+          branch: gh_12.0.3.Final
       - name: Build project
         id: dockerstep
         uses: ./builddir/
